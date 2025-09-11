@@ -5,3 +5,9 @@ mockup_inicio.html
 # Ignorar archivos de sistema
 .DS_Store
 thumbs.db
+
+# Ignorar archivos de documentación y prompts
+BITACORA_PROYECTO.md
+contenido_web_karttikeia.md
+YOGA_PROMPT.md
+GEMINI.md
