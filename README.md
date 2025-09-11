@@ -41,7 +41,4 @@ Para ver el sitio web en tu máquina local, puedes usar el módulo de servidor w
 
 ## 📸 Créditos de Imagen
 
-- Imagen de fondo: [nombre del fotógrafo] en [sitio web]
-- Imagen de Clases de Yoga: [nombre del fotógrafo] en [sitio web]
-- Imagen de Quiromasaje: [nombre del fotógrafo] en [sitio web]
-- Imagen de Desarrollo Personal: [nombre del fotógrafo] en [sitio web]
+Todas las imágenes utilizadas en este proyecto han sido generadas por Google Gemini.
