@@ -1,0 +1,79 @@
+/* --- ESTILOS PARA EL ACORDEÓN DE SERVICIOS --- */
+
+.service-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-header {
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-header h3 {
+    margin: 0;
+}
+
+.service-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 30px;
+}
+
+.service-item.active .service-content {
+    padding: 30px;
+    max-height: 1000px; /* Ajusta este valor si el contenido es muy largo */
+}
+
+.service-content .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-content img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.service-item.active .icon {
+    transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
+    .service-content .content-wrapper {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .service-content .text-content {
+        flex: 1;
+    }
+
+    .service-content .image-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

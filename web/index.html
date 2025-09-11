@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* --- VARIABLES DE DISEÑO "TIERRA Y ALMA" --- */
         :root {
@@ -124,7 +125,7 @@
         /* --- SECCIÓN HERO --- */
         .hero {
             text-align: center;
-            background: linear-gradient(rgba(250, 248, 245, 0.7), rgba(250, 248, 245, 0.7)), url(images/hero-background.jpg) no-repeat center center/cover;
+            background: linear-gradient(rgba(250, 248, 245, 0.7), rgba(250, 248, 245, 0.7)), url(images/fondo.png) no-repeat center center/cover;
             min-height: 70vh;
             display: flex;
             align-items: center;
@@ -264,18 +265,65 @@
 
         <section id="servicios" class="services container">
             <h2>Nuestros Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Clases de Yoga</h3>
-                    <p>Prácticas holísticas para encontrar el bienestar físico y emocional.</p>
+            <div class="service-accordion">
+                <!-- Servicio 1: Clases de Yoga -->
+                <div class="service-item">
+                    <div class="service-header">
+                        <h3>Clases de Yoga</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="content-wrapper">
+                            <div class="text-content">
+                                <h4>Gnana Yoga del conocimiento</h4>
+                                <p>Descubre el Gnana Yoga, el camino del conocimiento espiritual en el mundo del yoga. Enfocado en el estudio, la meditación y la auto-indagación, el Gnana Yoga busca la liberación espiritual, la moksha, a través de la comprensión profunda de la verdadera naturaleza de la realidad, que es la unidad de todo lo que existe.</p>
+                                <p>Las principales técnicas del gnana yoga son: el estudio de las escrituras sagradas, la meditación y la auto-investigación.</p>
+                                <h4>Pranayama y Asanas</h4>
+                                <p>Pranayama y asanas son una combinación de técnicas de respiración y posturas de yoga. Se utilizan para mejorar la salud y el bienestar, tanto físicos como mentales, ayudando a reducir el estrés, mejorar la concentración y aumentar la energía.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/clases_Atico.png" alt="Clases de Yoga">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Quiromasaje</h3>
-                    <p>Sesiones para liberar tensiones, aliviar molestias y revitalizar tu cuerpo.</p>
+
+                <!-- Servicio 2: Quiromasaje -->
+                <div class="service-item">
+                    <div class="service-header">
+                        <h3>Quiromasaje</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="content-wrapper">
+                            <div class="text-content">
+                                <h4>Experimenta la Relajación y el Bienestar</h4>
+                                <p>Si estás buscando una forma de sentirte bien físicamente, te recomiendo probar mis servicios de quiromasaje. Sé que el estrés y los dolores de espalda pueden afectar tu bienestar, pero mis sesiones de quiromasaje pueden ayudarte a aliviar esos malestares y a relajarte.</p>
+                                <p>El quiromasaje es una técnica de masaje que utiliza las manos para manipular los tejidos blandos del cuerpo, con el objetivo de aliviar el dolor, mejorar la circulación y promover la relajación.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/masaje.png" alt="Sesión de Quiromasaje">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Desarrollo Personal</h3>
-                    <p>Programas diseñados para ayudarte a conectar con tu ser interior.</p>
+
+                <!-- Servicio 3: Desarrollo Personal -->
+                <div class="service-item">
+                    <div class="service-header">
+                        <h3>Desarrollo Personal</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <div class="content-wrapper">
+                            <div class="text-content">
+                                <p>Programas diseñados para ayudarte a conectar con tu ser interior, explorar tu potencial y vivir una vida más plena y consciente. A través de diferentes técnicas y herramientas, te acompañamos en tu camino de autoconocimiento y crecimiento.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/mario.png" alt="Desarrollo Personal">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -330,6 +378,29 @@
             <p style="font-size: 0.8rem; color: #999;">Foto de <a href="https://unsplash.com/es/@chelseacgates?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chelsea Gates</a> en <a href="https://unsplash.com/es/fotos/persona-en-pantalones-cortos-azules-sentada-en-la-orilla-de-la-playa-durante-el-dia-n8L1VYaypcw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceItems = document.querySelectorAll('.service-item');
+
+            serviceItems.forEach(item => {
+                const header = item.querySelector('.service-header');
+                header.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.service-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                        currentlyActive.querySelector('.icon').textContent = '+';
+                    }
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        item.querySelector('.icon').textContent = '-';
+                    } else {
+                        item.querySelector('.icon').textContent = '+';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

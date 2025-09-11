@@ -16,11 +16,13 @@ Este repositorio contiene el código fuente del sitio web para "El Ático de las
     - **Instructor:** Presentación del instructor.
     - **Contacto:** Acceso rápido a email y WhatsApp.
 - **Fuentes Elegantes:** Uso de `Playfair Display` para títulos y `Montserrat` para el cuerpo del texto, aportando un toque de elegancia y legibilidad.
+- **Sección de Servicios Interactiva:** Los servicios se presentan en un formato de acordeón para una experiencia de usuario más limpia y organizada.
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **HTML5**
-- **CSS3** (integrado en el propio archivo HTML)
+- **CSS3**
+- **JavaScript**
 - **Google Fonts**
 
 ## 🚀 Cómo Visualizar el Proyecto Localmente
@@ -39,6 +41,7 @@ Para ver el sitio web en tu máquina local, puedes usar el módulo de servidor w
 
 ## 📸 Créditos de Imagen
 
-- La imagen de fondo de la sección de inicio es de **Chelsea Gates** en **Unsplash**.
-  - Foto de <a href="https://unsplash.com/es/@chelseacgates?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chelsea Gates</a> en <a href="https://unsplash.com/es/fotos/persona-en-pantalones-cortos-azules-sentada-en-la-orilla-de-la-playa-durante-el-dia-n8L1VYaypcw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
-
+- Imagen de fondo: [nombre del fotógrafo] en [sitio web]
+- Imagen de Clases de Yoga: [nombre del fotógrafo] en [sitio web]
+- Imagen de Quiromasaje: [nombre del fotógrafo] en [sitio web]
+- Imagen de Desarrollo Personal: [nombre del fotógrafo] en [sitio web]
