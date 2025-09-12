@@ -35,7 +35,7 @@
 
 .service-item.active .service-content {
     padding: 30px;
-    max-height: 1000px; /* Ajusta este valor si el contenido es muy largo */
+    max-height: 2000px; /* Ajusta este valor si el contenido es muy largo */
 }
 
 .service-content .content-wrapper {
