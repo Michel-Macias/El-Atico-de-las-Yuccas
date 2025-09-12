@@ -15,7 +15,7 @@
             --bg-color: #FAF8F5;
             --text-color: #333333;
             --accent-color: #556B2F; /* Verde Oliva */
-            --cta-color: #E07A5F;    /* Terracota */
+            --cta-color: #C55132;    /* Terracota (Contraste corregido) */
             --font-family-headings: 'Playfair Display', serif;
             --font-family-body: 'Montserrat', sans-serif;
         }
@@ -36,6 +36,13 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
+        }
+
+        /* --- ESTILO DE FOCO VISIBLE PARA ACCESIBILIDAD --- */
+        :focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 3px;
+            border-radius: 2px;
         }
 
         .container {
@@ -417,19 +424,42 @@
         document.addEventListener('DOMContentLoaded', function () {
             const serviceItems = document.querySelectorAll('.service-item');
 
-            serviceItems.forEach(item => {
+            serviceItems.forEach((item, index) => {
                 const header = item.querySelector('.service-header');
-                header.addEventListener('click', () => {
+                const content = item.querySelector('.service-content');
+                const icon = header.querySelector('.icon');
+
+                // Set up ARIA attributes
+                const contentId = `service-content-${index + 1}`;
+                content.id = contentId;
+                header.setAttribute('aria-controls', contentId);
+                header.setAttribute('role', 'button');
+                header.setAttribute('tabindex', '0');
+                header.setAttribute('aria-expanded', 'false');
+
+                const toggle = () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close any currently active item that isn't this one
                     const currentlyActive = document.querySelector('.service-item.active');
                     if (currentlyActive && currentlyActive !== item) {
                         currentlyActive.classList.remove('active');
-                        currentlyActive.querySelector('.icon').textContent = '+';
+                        const activeHeader = currentlyActive.querySelector('.service-header');
+                        activeHeader.setAttribute('aria-expanded', 'false');
+                        activeHeader.querySelector('.icon').textContent = '+';
                     }
+
+                    // Toggle the current item
                     item.classList.toggle('active');
-                    if (item.classList.contains('active')) {
-                        item.querySelector('.icon').textContent = '-';
-                    } else {
-                        item.querySelector('.icon').textContent = '+';
+                    header.setAttribute('aria-expanded', !isActive);
+                    icon.textContent = !isActive ? '-' : '+';
+                };
+
+                header.addEventListener('click', toggle);
+                header.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggle();
                     }
                 });
             });
