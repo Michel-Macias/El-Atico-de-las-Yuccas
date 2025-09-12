@@ -12,10 +12,7 @@ contenido_web_karttikeia.md
 YOGA_PROMPT.md
 GEMINI.md
 
-# Ignore images in the root directory
-*.png
-*.jpeg
-*.jpg
+
 
 # Ignore markdown files in the root directory, except for README.md
 *.md
