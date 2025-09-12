@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://michel-macias.github.io/El-Atico-de-las-Yuccas/sitemap.xml

@@ -4,6 +4,11 @@ Este repositorio contiene el código fuente del sitio web para "El Ático de las
 
 **Nota especial:** Este es un proyecto personal, creado con mucho cariño como regalo para un buen amigo.
 
+## 🌐 Enlace a la web
+
+Puedes visitar la web en el siguiente enlace:
+[https://michel-macias.github.io/El-Atico-de-las-Yuccas/](https://michel-macias.github.io/El-Atico-de-las-Yuccas/)
+
 ## ✨ Características
 
 - **Diseño de Página Única:** Toda la información accesible en una sola vista, con un menú de navegación para un desplazamiento suave entre secciones.
@@ -19,6 +24,10 @@ Este repositorio contiene el código fuente del sitio web para "El Ático de las
 - **Sección de Servicios Interactiva:** Los servicios se presentan en un formato de acordeón para una experiencia de usuario más limpia y organizada.
 
 ## 🛠️ Tecnologías Utilizadas
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 - **HTML5**
 - **CSS3**
