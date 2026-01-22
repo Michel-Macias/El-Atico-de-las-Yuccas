@@ -3,468 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre El Ático de las Yuccas, un espacio de yoga y bienestar en Pamplona. Ofrecemos clases de yoga, quiromasaje y desarrollo personal para ayudarte a encontrar el equilibrio y la armonía.">
-    <title>El Ático de las Yuccas - Yoga y Bienestar</title>
+    <meta name="description" content="El Ático de las Yuccas - Espacio de yoga y bienestar en Pamplona. Clases de Yoga, Quiromasaje y Desarrollo Personal.">
+    <title>El Ático de las Yuccas | Yoga y Bienestar</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* --- VARIABLES DE DISEÑO "TIERRA Y ALMA" --- */
-        :root {
-            --bg-color: #FAF8F5;
-            --text-color: #333333;
-            --accent-color: #556B2F; /* Verde Oliva */
-            --cta-color: #C55132;    /* Terracota (Contraste corregido) */
-            --font-family-headings: 'Playfair Display', serif;
-            --font-family-body: 'Montserrat', sans-serif;
-        }
-
-        /* --- RESET Y ESTILOS BASE (MOBILE FIRST) --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-family-body);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-        }
-
-        /* --- ESTILO DE FOCO VISIBLE PARA ACCESIBILIDAD --- */
-        :focus-visible {
-            outline: 3px solid var(--accent-color);
-            outline-offset: 3px;
-            border-radius: 2px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-family-headings);
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--accent-color);
-        }
-
-        h1 {
-            font-size: 2.8rem;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        /* --- BOTÓN PRIMARIO (ESTILO SÓLIDO) --- */
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border: 2px solid var(--cta-color);
-            background-color: var(--cta-color);
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            background-color: #d86c50; /* Un poco más oscuro */
-            border-color: #d86c50;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        /* --- HEADER Y NAVEGACIÓN --- */
-        .header {
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-        .logo {
-            font-family: var(--font-family-headings);
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-        .main-nav ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
-        .main-nav a {
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-        .main-nav a:hover {
-            color: var(--cta-color);
-        }
-
-
-        /* --- SECCIÓN HERO --- */
-        .hero {
-            text-align: center;
-            background: linear-gradient(rgba(250, 248, 245, 0.7), rgba(250, 248, 245, 0.7)), url(images/fondo.png) no-repeat center center/cover;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            margin-bottom: 20px;
-            color: #445525; /* Un verde un poco más oscuro para contraste */
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* --- SECCIÓN SERVICIOS --- */
-        .services-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .service-card {
-            background-color: white;
-            padding: 40px 30px;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .service-card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* --- OTRAS SECCIONES --- */
-        .section-bg {
-            background-color: white;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .instructor-layout {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            text-align: center;
-        }
-        
-        .instructor-layout img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-
-        /* --- FOOTER --- */
-        .footer {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .footer p {
-            margin-bottom: 10px;
-        }
-        .footer a {
-            color: var(--accent-color);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- MEDIA QUERIES (TABLET Y ESCRITORIO) --- */
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 4rem;
-            }
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .logo {
-                margin-bottom: 0;
-            }
-            .services-grid {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .service-card {
-                width: 31%;
-            }
-            .instructor-layout {
-                flex-direction: row;
-                text-align: left;
-                gap: 50px;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <header class="header container">
-        <a href="#inicio" class="logo">El Ático de las Yuccas</a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#tarifas">Tarifas</a></li>
-                <li><a href="#instructor">Instructor</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">El Ático de las Yuccas</a>
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">☰</div>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#tarifas" class="nav-link">Tarifas</a></li>
+                    <li><a href="#instructor" class="nav-link">Instructor</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="inicio" class="hero">
-            <div class="container">
-                <h1>El Ático de las Yuccas Yoga</h1>
-                <p>Transforma Tu Vida con Yoga y Desarrollo Personal. Un refugio para conectar con tu ser interior, liberar tensiones y revitalizar tu energía.</p>
-                <a href="https://wa.me/34659027572" class="btn">¡Contáctame!</a>
+            <div class="container hero-content fade-in">
+                <h1>Encuentra tu centro,<br>recupera tu equilibrio</h1>
+                <p>Un refugio para conectar con tu ser interior, liberar tensiones y revitalizar tu energía en el corazón de Pamplona.</p>
+                <a href="#servicios" class="btn">Descubre más</a>
             </div>
         </section>
 
-        <section class="intro container">
-            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 20px auto;">
-                Empieza hoy. Disfruta de un tiempo para ti, déjate llevar por la relajación y el bienestar. Te esperamos para que puedas alcanzar un estado de equilibrio y armonía.
-            </p>
-        </section>
-
-        <section id="servicios" class="services container">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-accordion">
-                <!-- Servicio 1: Clases de Yoga -->
-                <div class="service-item">
-                    <div class="service-header">
-                        <h3>Clases de Yoga</h3>
-                        <span class="icon">+</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="content-wrapper">
-                            <div class="text-content">
-                                <h4>Gnana Yoga del conocimiento</h4>
-                                <p>Descubre el Gnana Yoga, el camino del conocimiento espiritual en el mundo del yoga. Enfocado en el estudio, la meditación y la auto-indagación, el Gnana Yoga busca la liberación espiritual, la moksha, a través de la comprensión profunda de la verdadera naturaleza de la realidad, que es la unidad de todo lo que existe.</p>
-                                <p>Las principales técnicas del gnana yoga son: el estudio de las escrituras sagradas, la meditación y la auto-investigación. Leer y estudiar las escrituras sagradas. Meditar sobre las preguntas existenciales, como '¿Quién soy?' y '¿Cuál es el propósito de la vida?'. Participar en discusiones filosóficas sobre la naturaleza de la realidad. Tratar de vivir una vida de acuerdo con los principios del yoga, como la no violencia, la honestidad y la compasión.</p>
-                                <p>El gnana yoga es una práctica que puede ser adaptada a las necesidades y capacidades de cada persona. No hay un camino único para el gnana yoga, y cada persona debe encontrar lo que funciona mejor para ella.</p>
-                                <h4>Pranayama y Asanas</h4>
-                                <p>Pranayama y asanas son una combinación de técnicas de respiración y posturas de yoga. Se utilizan para mejorar la salud y el bienestar, tanto físicos como mentales, ayudando a reducir el estrés, mejorar la concentración y aumentar la energía.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="images/clases_Atico.png" alt="Clases de Yoga">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Servicio 2: Quiromasaje -->
-                <div class="service-item">
-                    <div class="service-header">
-                        <h3>Quiromasaje</h3>
-                        <span class="icon">+</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="content-wrapper">
-                            <div class="text-content">
-                                <h4>Experimenta la Relajación y el Bienestar</h4>
-                                <p>Si estás buscando una forma de sentirte bien físicamente, te recomiendo probar mis servicios de quiromasaje. Sé que el estrés y los dolores de espalda pueden afectar tu bienestar, pero mis sesiones de quiromasaje pueden ayudarte a aliviar esos malestares y a relajarte.</p>
-                                <p>El quiromasaje es una técnica de masaje que utiliza las manos para manipular los tejidos blandos del cuerpo, con el objetivo de aliviar el dolor, mejorar la circulación y promover la relajación.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="images/masaje.png" alt="Sesión de Quiromasaje">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Servicio 3: Desarrollo Personal -->
-                <div class="service-item">
-                    <div class="service-header">
-                        <h3>Desarrollo Personal</h3>
-                        <span class="icon">+</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="content-wrapper">
-                            <div class="text-content">
-                                <p>Programas diseñados para ayudarte a conectar con tu ser interior, explorar tu potencial y vivir una vida más plena y consciente. A través de diferentes técnicas y herramientas, te acompañamos en tu camino de autoconocimiento y crecimiento.</p>
-                                <h4>Psicología Yogica</h4>
-                                <p>¿Quieres entenderte mejor a ti mismo? ¿Te sientes perdido o desconectado de ti mismo? ¿Te gustaría entender mejor tus emociones, tus pensamientos y tu comportamiento? Si es así, la Psicología Yóguica es la respuesta que estás buscando. La Psicología Yóguica es una antigua disciplina que nos enseña a conocer los siete cuerpos que nos conforman. Al conocer nuestros siete cuerpos, podemos mejorar nuestra salud, nuestra felicidad y nuestra relación con nosotros mismos y con los demás.</p>
-                                
-                            </div>
-                            <div class="image-container">
-                                <img src="images/mario.png" alt="Desarrollo Personal">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Intro -->
+        <section class="section">
+            <div class="container text-center fade-in">
+                <h2 style="margin-bottom: 2rem;">Bienvenido a tu espacio</h2>
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+                    Empieza hoy. Disfruta de un tiempo para ti, déjate llevar por la relajación y el bienestar. Te esperamos para que puedas alcanzar un estado de equilibrio y armonía.
+                </p>
             </div>
         </section>
-        
-        <section id="tarifas" class="section-bg">
+
+        <!-- Services Section -->
+        <section id="servicios" class="section services-section">
             <div class="container">
-                <h2>Tarifas</h2>
-                <p style="text-align: center; max-width: 800px; margin: -20px auto 40px auto;">Elige el plan que mejor se adapte a ti. Para más información, no dudes en contactar.</p>
-                <!-- Contenido de tarifas como placeholder -->
+                <h2 class="text-center fade-in">Nuestros Servicios</h2>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Clase Suelta</h3>
-                        <p style="font-size: 2rem; font-family: var(--font-family-headings); color: var(--cta-color);">15€</p>
-                        <p>Ideal para probar o para visitas puntuales.</p>
+                    
+                    <!-- Service 1 -->
+                    <div class="service-card fade-in">
+                        <img src="images/clases_Atico.png" alt="Clases de Yoga" class="service-image">
+                        <div class="service-info">
+                            <h3>Yoga Integral</h3>
+                            <p>Gnana Yoga del conocimiento, Pranayama y Asanas. Una combinación de técnicas de respiración, posturas y meditación para el bienestar físico y mental.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Bono Mensual</h3>
-                        <p style="font-size: 2rem; font-family: var(--font-family-headings); color: var(--cta-color);">35€</p>
-                        <p>Clase semanal de 1 hora y cuarto.</p>
+
+                    <!-- Service 2 -->
+                    <div class="service-card fade-in">
+                        <img src="images/masaje.png" alt="Quiromasaje" class="service-image">
+                        <div class="service-info">
+                            <h3>Quiromasaje</h3>
+                            <p>Técnicas manuales para aliviar el dolor, mejorar la circulación y promover una relajación profunda. Ideal para liberar el estrés acumulado.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Bono Trimestral</h3>
-                        <p style="font-size: 2rem; font-family: var(--font-family-headings); color: var(--cta-color);">100€</p>
-                        <p>El mejor precio para un compromiso a largo plazo.</p>
+
+                    <!-- Service 3 -->
+                    <div class="service-card fade-in">
+                        <img src="images/mario.png" alt="Desarrollo Personal" class="service-image">
+                        <div class="service-info">
+                            <h3>Desarrollo Personal</h3>
+                            <p>Psicología Yóguica y acompañamiento. Programas diseñados para explorar tu potencial y vivir una vida más plena y consciente.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="tarifas" class="section">
+            <div class="container">
+                <h2 class="text-center fade-in">Tarifas</h2>
+                <p class="text-center fade-in" style="margin-bottom: 3rem;">Inversión en tu bienestar</p>
+                
+                <div class="pricing-grid">
+                    <div class="price-card fade-in">
+                        <h4>Clase Suelta</h4>
+                        <div class="price">15€</div>
+                        <p>Perfecto para probar o clases puntuales.</p>
+                    </div>
+                    <div class="price-card fade-in">
+                        <h4>Bono Mensual</h4>
+                        <div class="price">35€</div>
+                        <p>1 clase semanal de 1h 15min.<br>Constancia y progreso.</p>
+                    </div>
+                    <div class="price-card fade-in">
+                        <h4>Bono Trimestral</h4>
+                        <div class="price">100€</div>
+                        <p>Compromiso a largo plazo.<br>El mejor valor.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="instructor" class="container">
-            <h2>Tu Instructor</h2>
-            <div class="instructor-layout">
-                <img src="images/instructor-mario.png" alt="Foto de Mario Gartxitorena">
-                <div>
+        <!-- Instructor Section -->
+        <section id="instructor" class="section" style="background-color: var(--color-surface);">
+            <div class="container instructor-container">
+                <img src="images/instructor-mario.png" alt="Mario Gartxitorena" class="instructor-img fade-in">
+                <div class="instructor-bio fade-in">
+                    <h2>Tu Instructor</h2>
                     <h3>Mario Gartxitorena</h3>
-                    <p>Nos dedicamos a ofrecerte servicios de yoga, quiromasaje y desarrollo personal. Nuestra misión es ayudarte a encontrar el bienestar físico y emocional a través de prácticas holísticas.</p>
-                    <p>Con años de experiencia y una profunda pasión por el bienestar, Mario te guiará en tu viaje hacia el equilibrio y la armonía interior, adaptando las prácticas a tus necesidades individuales.</p>
+                    <p style="margin-bottom: 1rem;">Instructor de Yoga y Terapeuta</p>
+                    <p style="margin-bottom: 1rem;">
+                        "Mi misión es guiarte en tu viaje hacia el equilibrio y la armonía interior. Con formación especializada en la escuela <strong>Sanatana Dharma</strong> y <strong>Centro Surya</strong>, combino la sabiduría del Jhana Yoga con técnicas terapéuticas manuales."
+                    </p>
+                    <a href="#contacto" class="btn" style="margin-top: 1rem;">Hablemos</a>
                 </div>
-                <div class="formacion-container">
-                    <h3>Formación</h3>
-                    <div class="formacion-item">
-                        <h4>Formación Quiromasaje</h4>
-                        <p>Descubre el Quiromasaje con Mario Gartxitorena (Karttikeya), un apasionado experto en bienestar. Con una formación de 2º nivel en Centro Surya, estoy especializado en aliviar el dolor, el estrés y la ansiedad. Mi formación en Centro Surya garantiza una capacitación completa y actualizada, con énfasis en la práctica y atención personalizada. Tu bienestar es mi prioridad.</p>
-                        <a href="https://centrosurya.com/" class="btn-formacion" target="_blank">Centro Surya</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="section contact-section">
+            <div class="container contact-container">
+                <div class="contact-info fade-in">
+                    <h2>Contacto</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">¿Listo para empezar? Contáctanos.</p>
+                    
+                    <h4>Ubicación</h4>
+                    <p>C. de los Teobaldos, 5, 31002 Pamplona, Navarra</p>
+                    
+                    <h4>Email</h4>
+                    <p><a href="mailto:mariogartxi@gmail.com">mariogartxi@gmail.com</a></p>
+                    
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/34659027572">659 02 75 72</a></p>
+
+                    <div style="margin-top: 2rem;">
+                         <img src="images/mario_medita.png" alt="Meditación" style="width: 100px; border-radius: 50%; border: 3px solid white;">
                     </div>
-                    <div class="formacion-item">
-                        <h4>Formación Jhana Yoga</h4>
-                        <p>Me he formado en la escuela Sanatana Dharma, especializándome en Jhana Yoga del conocimiento. Durante mi tiempo en esta escuela, he adquirido un profundo conocimiento y comprensión de esta disciplina. Jhana Yoga es una práctica que busca alcanzar la iluminación a través del conocimiento y la meditación profunda. En esta especialidad, he aprendido a cultivar una mente clara y concentrada, a través de técnicas de respiración y meditación. Además, he explorado los diferentes niveles de conciencia y he aprendido a conectar con mi yo interior de una manera profunda y significativa. Estoy muy agradecido por la oportunidad de haberme formado en esta escuela, ya que me ha brindado las herramientas necesarias para continuar mi camino espiritual y crecimiento personal.</p>
-                        <a href="https://yogacondharma.com/" class="btn-formacion" target="_blank">Sanatana Dharma</a>
-                    </div>
+                </div>
+                
+                <div class="map-container fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.4719782282!2d-1.641924684524!3d42.815951979158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50928b1738d8c7%3A0x5b5d74f7c3b3b3b!2sC.%20de%20los%20Teobaldos%2C%205%2C%2031002%20Pamplona%2C%20Navarra%2C%20Spain!5e0!3m2!1sen!2sus!4v1663000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <section id="contacto" class="container section-bg">
-        <div class="contact-layout">
-            <div class="contact-info">
-                <h2>Contacto</h2>
-                <img src="images/mario_medita.png" alt="Mario Gartxitorena meditando">
-                <h3>Mario Gartxitorena (Karttikeia)</h3>
-                <p>Instructor de Yoga por la Escuela Sanatana Dharma</p>
-                <h4>Ubicación</h4>
-                <p>C. de los Teobaldos, 5, 31002 Pamplona, Navarra</p>
-                <h4>Horario</h4>
-                <p>A concretar</p>
-                <h4>Contacto</h4>
-                <p><a href="mailto:mariogartxi@gmail.com">mariogartxi@gmail.com</a></p>
-                <p><a href="https://wa.me/34659027572">WhatsApp: 659 02 75 72</a></p>
-            </div>
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.4719782282!2d-1.641924684524!3d42.815951979158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50928b1738d8c7%3A0x5b5d74f7c3b3b3b!2sC.%20de%20los%20Teobaldos%2C%205%2C%2031002%20Pamplona%2C%20Navarra%2C%20Spain!5e0!3m2!1sen!2sus!4v1663000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
-            <p style="font-size: 0.9rem; color: #777;">&copy; 2025 El Ático de las Yuccas. Todos los derechos reservados.</p>
-            <p style="font-size: 0.8rem; color: #999;">Foto de <a href="https://unsplash.com/es/@chelseacgates?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chelsea Gates</a> en <a href="https://unsplash.com/es/fotos/persona-en-pantalones-cortos-azules-sentada-en-la-orilla-de-la-playa-durante-el-dia-n8L1VYaypcw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+        <div class="container">
+            <p>&copy; 2025 El Ático de las Yuccas. Todos los derechos reservados.</p>
+            <p style="opacity: 0.7; font-size: 0.8rem; margin-top: 0.5rem;">Diseñado con cariño.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const serviceItems = document.querySelectorAll('.service-item');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
 
-            serviceItems.forEach((item, index) => {
-                const header = item.querySelector('.service-header');
-                const content = item.querySelector('.service-content');
-                const icon = header.querySelector('.icon');
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                menuBtn.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            });
 
-                // Set up ARIA attributes
-                const contentId = `service-content-${index + 1}`;
-                content.id = contentId;
-                header.setAttribute('aria-controls', contentId);
-                header.setAttribute('role', 'button');
-                header.setAttribute('tabindex', '0');
-                header.setAttribute('aria-expanded', 'false');
-
-                const toggle = () => {
-                    const isActive = item.classList.contains('active');
-
-                    // Close any currently active item that isn't this one
-                    const currentlyActive = document.querySelector('.service-item.active');
-                    if (currentlyActive && currentlyActive !== item) {
-                        currentlyActive.classList.remove('active');
-                        const activeHeader = currentlyActive.querySelector('.service-header');
-                        activeHeader.setAttribute('aria-expanded', 'false');
-                        activeHeader.querySelector('.icon').textContent = '+';
-                    }
-
-                    // Toggle the current item
-                    item.classList.toggle('active');
-                    header.setAttribute('aria-expanded', !isActive);
-                    icon.textContent = !isActive ? '-' : '+';
-                };
-
-                header.addEventListener('click', toggle);
-                header.addEventListener('keydown', (event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        toggle();
-                    }
+            // Close menu when clicking a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuBtn.textContent = '☰';
+                    menuBtn.setAttribute('aria-expanded', 'false');
                 });
             });
+
+            // Intersection Observer for Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.fade-in');
+            animatedElements.forEach(el => observer.observe(el));
         });
     </script>
-
 </body>
 </html>
