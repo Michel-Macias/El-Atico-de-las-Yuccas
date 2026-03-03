@@ -17,3 +17,8 @@ GEMINI.md
 # Ignore markdown files in the root directory, except for README.md
 *.md
 !README.md
+
+# Environment variables
+.env
+.env.local
+.env.*.local
